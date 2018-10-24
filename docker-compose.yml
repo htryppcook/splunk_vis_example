@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+  splunk:
+    build: .
+    environment:
+      - "SPLUNK_START_ARGS=--accept-license"
+      - "SPLUNK_PASSWORD=${SPLUNK_PASSWORD}"
+    ports:
+      - "0.0.0.0:32784:8000"
